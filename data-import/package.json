@@ -1,0 +1,14 @@
+{
+  "name": "data-importer",
+  "version": "1.0.0",
+  "description": "Web scraper for all Taylor Swift song lyrics",
+  "main": "main.js",
+  "scripts": {},
+  "author": "Jasmine Kwong",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "jsdom": "^22.1.0"
+  }
+}

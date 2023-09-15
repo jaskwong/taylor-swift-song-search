@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "english_analyzer": {
+          "type": "standard",
+          "stopwords": "_english_"
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "analyzer": "english_analyzer",
+        "store": true
+      },
+      "album": {
+        "type": "keyword",
+        "copy_to": "album_full_title"
+      },
+      "album_variant": {
+        "type": "keyword",
+        "copy_to": "album_full_title"
+      },
+      "album_full_title": {
+        "type": "text",
+        "store": true
+      },
+      "release_date": {
+        "type": "date",
+        "format": "yyyy-MM-dd",
+        "index": false,
+        "store": true
+      },
+      "featured_artists": {
+        "type": "keyword",
+        "store": true
+      },
+      "writers": {
+        "type": "keyword",
+        "store": true
+      },
+      "lyrics": {
+        "type": "text",
+        "index_options": "offsets",
+        "store": true
+      }
+    }
+  }
+}
